@@ -1,5 +1,8 @@
 # Lending-Club-Default-Neural-net
 
+
+## RAW CODE IN Lending_Club_NN_Analysis.ipynb
+
 ## Data Summary
 This data was comprised of the following features: credit.policy: 1 if the customer meets the credit underwriting criteria of LendingClub.com, and 0 otherwise.
 
