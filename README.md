@@ -4,7 +4,7 @@
 ## RAW CODE IN Lending_Club_NN_Analysis.ipynb
 
 ## Data Summary
-This data was comprised of the following features: credit.policy: 1 if the customer meets the credit underwriting criteria of LendingClub.com, and 0 otherwise.
+This data was comprised of the following features: credit.policy: 1 if the customer meets the credit underwriting criteria of LendingClub.com, and 0 otherwise. In other words Binary classification
 
 purpose: The purpose of the loan (takes values "credit_card", "debt_consolidation", "educational", "major_purchase", "small_business", and "all_other").
 
