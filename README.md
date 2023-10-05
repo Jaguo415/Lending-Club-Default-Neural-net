@@ -31,5 +31,21 @@ pub.rec: The borrower's number of derogatory public records (bankruptcy filings,
 ## Problem Statement:
 For companies like Lending Club correctly predicting whether or not a loan will be a default is very important. In this project, using the historical data from 2007 to 2015, you have to build a deep learning model to predict the chance of default for future loans
 
-### RAW CODE IN Lending_Club_NN_Analysis.ipynb in this repo
+## TLDR:
+
+We initialize pandas and numpy librarys for data frame reading and manipulation. We build the data frame with loan_data.csv, and perform basic manipulation. Identifying dataframe describe, row and column size, headers, and dtypes. We identify the not_fully_paid column which is what we will be comparing. The pie chart shows the count of transactions for Fully paid vs not fully paid, as our goal is to create a model to identify those who will default. we can see it's 16% not fully paid, and 84% paid their full statement on time. Now that we know 16% of transactions are not fully paid, we have to figure out the purpose. We add the purpose into a grouping, with only the not_fully_paid and plot this into a table for the purpose of viewing the data in a list. As a result, we get two columns, Purpose and the count under each purpose. Here is the fun part, we group our other features in the dataframe. I'll drop the list below.
+
+int.rate             float64
+installment          float64
+log.annual.inc       float64
+dti                  float64
+fico                   int64
+days.with.cr.line    float64
+revol.bal              int64
+revol.util           float64
+inq.last.6mths         int64
+delinq.2yrs            int64
+pub.rec                int64
+
+With these features, we create groupings 1-11, within each grouping we Create pivot tables to calculate the mean (average) values of several numerical columns using the not fully paid column. We have to split our groupings into two. Due to a real estate limit. So in the code, you'll see 1-5, and 6-11. Each of the groupings is re-labeled as a new feature. Then we use OneHotEncoder, to turn all of our 11 groupings into values to either a 0 or a 1. We re-merge the 11 groups now our features. We add the 11 features back into the original dataset. When we print the new data frame, we can see one column we must take care of. Everything is an integer, except purpose. This column is still a string, so we remove the purpose column from our data frame by dropping it. Finally, all we have is a gigantic data frame with every single cell as a number. We Initialize a heatmap for the sake of understanding the correlation between each feature. We split out the dataframe into train tests, our ratio is 75% train and 25% test. With out Train test split, we have to use the standard scaler on our Xtrain and test. 
 
