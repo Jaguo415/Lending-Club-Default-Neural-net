@@ -1,8 +1,6 @@
 # Lending-Club-Default-Neural-net
 
 
-## RAW CODE IN Lending_Club_NN_Analysis.ipynb
-
 ## Data Summary
 This data was comprised of the following features: credit.policy: 1 if the customer meets the credit underwriting criteria of LendingClub.com, and 0 otherwise. In other words Binary classification
 
@@ -33,4 +31,5 @@ pub.rec: The borrower's number of derogatory public records (bankruptcy filings,
 ## Problem Statement:
 For companies like Lending Club correctly predicting whether or not a loan will be a default is very important. In this project, using the historical data from 2007 to 2015, you have to build a deep learning model to predict the chance of default for future loans
 
+### RAW CODE IN Lending_Club_NN_Analysis.ipynb in this repo
 
